@@ -45,13 +45,12 @@ Hostname=<hostname configured on the server>
 UserParameter=<key>, <shell command>
 ````
 
-Restart agentd after configuration, and verify if the key is worked on agent side (e.g: key: test.zabbix.key)
+#### restart agentd after configuration, and verify if the key is worked on agent side (e.g: key: test.zabbix.key)
 ````
 $ sudo zabbix_agentd start
 $ zabbix_agentd -t test.zabbix.key
 ````
-
-Verify if the zabbix server side can get the value of the key
+#### verify if the zabbix server side can get the value of the key
 ````
 sudo zabbix_get -s <zabbix agent IP> -p 10050 -k 'test.zabbix.key'
 ````
