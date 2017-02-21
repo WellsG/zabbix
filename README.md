@@ -25,4 +25,23 @@ zabbix-agent-2.4.7-1.fc22.x86_64
 zabbix-2.4.7-1.fc22.x86_64
 ````
 
+#### zabbix agent config
+/etc/zabbix_agentd.conf
+````
+Server=<IP addresses of Zabbix servers>
+ServerActive=<IP addresses of Zabbix servers>
+Hostname=<hostname configured on the server>
+UserParameter=<key>, <shell command>
+````
+
+Restart agentd after configuration, and verify if the key is worked on agent side (e.g: key: test.zabbix.key)
+````
+$ zabbix_agentd -t test.zabbix.key
+````
+
+Verify if the zabbix server side can get the value of the key
+````
+sudo zabbix_get -s <zabbix agent IP> -p 10050 -k 'test.zabbix.key'
+````
+
 
