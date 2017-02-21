@@ -12,6 +12,17 @@ zabbix22-web-mysql-2.2.16-1.el7.noarch
 zabbix22-server-2.2.16-1.el7.noarch
 zabbix22-web-2.2.16-1.el7.noarch
 ````
+#### zabbix server's db configuration
+````
+DBName=zabbix
+DBUser=zabbix
+DBPassword=zabbix
+````
+
+#### start zabbix server
+````
+sudo zabbix_server start
+````
 
 #### configuration on zabbix server
 start httpd and then visit:
@@ -36,6 +47,7 @@ UserParameter=<key>, <shell command>
 
 Restart agentd after configuration, and verify if the key is worked on agent side (e.g: key: test.zabbix.key)
 ````
+$ sudo zabbix_agentd start
 $ zabbix_agentd -t test.zabbix.key
 ````
 
