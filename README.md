@@ -55,4 +55,6 @@ $ zabbix_agentd -t test.zabbix.key
 sudo zabbix_get -s <zabbix agent IP> -p 10050 -k 'test.zabbix.key'
 ````
 
+## Run Zabbix in docker 
+https://www.zabbix.org/wiki/Dockerized_Zabbix
 
