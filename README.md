@@ -1,4 +1,5 @@
 # zabbix
+[zabbix wiki](https://www.zabbix.org/wiki/Main_Page)
 
 ### zabbix installation
 [install from package](https://www.zabbix.com/documentation/2.2/manual/installation/install_from_packages)
